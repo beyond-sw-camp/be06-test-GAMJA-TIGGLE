@@ -73,20 +73,21 @@ public List<GetAvailableExchangeRes> read(GetAvailableExchangeReq dto){
     public Boolean create(PostExchangeReq dto){
         Connection connection = null;
         PreparedStatement pstmt = null;
-        Integer result = null;
+        Integer rs = null;
 
         try {
             connection = dataSourceConfig.getConnection();
-            pstmt = connection.prepareStatement("INSERT INTO web.member (id, pw, name) VALUES (?, ?, ?)");
-            pstmt.setInt(1, dto.getProgramId());
-            pstmt.setInt(2, dto.getTimes());
-            pstmt.setString(3, dto.getSection());
-            pstmt.setInt(3, dto.getSeatId());
-            result = pstmt.executeUpdate();
 
-            if (result > 0) {
+            pstmt = connection.prepareStatement("INSERT INTO exchange (reservationId1, reservationId2) VALUES ( ? , ? ); " );
+            pstmt.setInt(1, dto.getReservationId1());
+            pstmt.setInt(2, dto.getReservationId2());
+
+            rs = pstmt.executeUpdate();
+
+            if (rs > 0) {
                 return true;
             }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
