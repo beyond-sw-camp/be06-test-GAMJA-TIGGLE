@@ -45,10 +45,12 @@ public enum BaseResponseMessage {
     EXCHANGE_FAIL_REQUEST_TIME_EXPIRE(true, 3003, "요청 시간이 만료되었습니다."),
     EXCHANGE_FAIL_ALREADY_FINISH_PROGRAM(true, 3003, "만료된 공연 정보입니다."),
     EXCHANGE_FAIL_ABNORMAL_ACCESS(true, 3003, "비정상적인 접근입니다."),
+    EXCHANGE_READ_SUCCESS(true, 3200, "교환 가능 좌석 조회에 성공했습니다."),
     EXCHANGE_FAIL_EXCEEDS_LIMIT(false, 3201, "교환 가능한 횟수를 초과하였습니다"),
     EXCHANGE_FAIL_INSUFFICIENT_BALANCE(false, 3101, "잔액이 부족합니다"),
     EXCHANGE_FAIL_ITEM_NOT_FOUND(false, 3202, "교환이 불가능한 좌석입니다"),
     EXCHANGE_FAIL(true, 3003, "교환 실패");
+
     //요청 횟수 제한
 
 
