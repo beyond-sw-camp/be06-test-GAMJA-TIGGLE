@@ -2,14 +2,10 @@ package org.example.tiggle.reservation.servlet;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import org.example.tiggle.config.BaseResponse;
-import org.example.tiggle.config.BaseResponseMessage;
 import org.example.tiggle.reservation.DAO.ReservationDao;
 import org.example.tiggle.reservation.DTO.EmptySeatRequest;
 import org.example.tiggle.reservation.DTO.EmptySeatResponse;
-import org.example.tiggle.user.DAO.MemberDao;
-import org.example.tiggle.user.DTO.request.PostMemberReq;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
