@@ -13,7 +13,7 @@ public class DataSourceConfig {
     public static HikariDataSource getInstance() {
         if (dataSource == null) {
             HikariConfig config = new HikariConfig();
-            config.setJdbcUrl("jdbc:mariadb://192.168.0.152:3306/tiggle");
+            config.setJdbcUrl("jdbc:mariadb://192.168.0.152:3306/tiggle1000");
             config.setUsername("masterKDU");
             config.setPassword("qwer1234");
             config.setMaximumPoolSize(10);
