@@ -1,47 +1,22 @@
 package org.example.tiggle.exchange.DTO.request;
 
 public class PostExchangeReq {
-    Integer programId;
-    Integer times;
-    String section;
-    Integer seatId;
+    Integer reservationId1;
+    Integer reservationId2;
 
-    public PostExchangeReq(Integer programId, Integer times, String section, Integer seatId) {
-        this.programId = programId;
-        this.times = times;
-        this.section = section;
-        this.seatId = seatId;
+    public Integer getReservationId1() {
+        return reservationId1;
     }
 
-    public Integer getProgramId() {
-        return programId;
+    public void setReservationId1(Integer reservationId1) {
+        this.reservationId1 = reservationId1;
     }
 
-    public void setProgramId(Integer programId) {
-        this.programId = programId;
+    public Integer getReservationId2() {
+        return reservationId2;
     }
 
-    public Integer getTimes() {
-        return times;
-    }
-
-    public void setTimes(Integer times) {
-        this.times = times;
-    }
-
-    public String getSection() {
-        return section;
-    }
-
-    public void setSection(String section) {
-        this.section = section;
-    }
-
-    public Integer getSeatId() {
-        return seatId;
-    }
-
-    public void setSeatId(Integer seatId) {
-        this.seatId = seatId;
+    public void setReservationId2(Integer reservationId2) {
+        this.reservationId2 = reservationId2;
     }
 }
